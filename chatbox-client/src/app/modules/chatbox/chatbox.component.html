@@ -1,0 +1,13 @@
+<div>
+	<p>Welcome to Chatbox</p>
+	<div>
+		<input [(ngModel)]="message" />
+		<button type="button" (click)="sendMessage()">Send</button>
+	</div>
+	<div *ngFor="let item of messagePast">
+		{{item.message}}
+	</div>
+	<div *ngFor="let item of messageList">
+		{{item}}
+	</div>
+</div>

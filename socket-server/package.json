@@ -1,0 +1,19 @@
+{
+  "name": "socket-server",
+  "version": "1.0.0",
+  "description": "Test servers",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "body-parser@1.19.0",
+    "cors": "cors@2.8.5",
+    "express": "express@4.17.1",
+    "mysql": "mysql@2.17.1",
+    "nodemon": "nodemon@2.0.2",
+    "socket.io": "socket.io@2.3.0"
+  },
+  "author": "Juan Carlos Rioja",
+  "license": "ISC"
+}
