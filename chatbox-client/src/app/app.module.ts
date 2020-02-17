@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
 import {ChatService} from './services/export';
 import { ChatboxComponent } from './modules/chatbox/chatbox.component'
+import { AppBootstrapModule } from './app-bootstrap.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ChatboxComponent } from './modules/chatbox/chatbox.component'
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppBootstrapModule
   ],
   providers: [ChatService],
   bootstrap: [AppComponent]
