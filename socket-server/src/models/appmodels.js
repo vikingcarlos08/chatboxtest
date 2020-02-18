@@ -1,7 +1,7 @@
 const conn = require('../db_connection.js');
 
 exports.getAllMessages = (result) => {
-	conn.query("SELECT * FROM messages", (err, res) => {
+	conn.query("SELECT * FROM messages ORDER BY date DESC ", (err, res) => {
 	        if(err) {
         	console.log("error: ", err);
         	result(null, err);
