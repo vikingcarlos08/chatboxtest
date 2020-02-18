@@ -1,15 +1,15 @@
 <div class="panel panel-primary">
 	<p class="panel-heading">Welcome to Chatbox</p>
-	<div class="panel-body col-6-md">
-		<input [(ngModel)]="message" />
-		<button type="button" (click)="sendMessage()">Send</button>
-	</div>
 	<div class="chatbox">
-		<div *ngFor="let item of messageList">
-			{{item}}
-		</div>
 		<div *ngFor="let item of messagePast">
 			{{item.message}}
 		</div>
+		<div *ngFor="let item of messageList">
+			{{item}}
+		</div>
+	</div>
+	<div class="panel-body col-6-md">
+		<input [(ngModel)]="message" />
+		<button type="button" (click)="sendMessage()">Send</button>
 	</div>
 </div>
