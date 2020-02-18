@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'
 
+import { AppRoutingModule } from './app.routing'
+
 import { AppComponent } from './app.component';
 import {ChatService} from './services/export';
 import { ChatboxComponent } from './modules/chatbox/chatbox.component'
@@ -17,7 +19,8 @@ import { AppBootstrapModule } from './app-bootstrap.module';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppBootstrapModule
+    AppBootstrapModule,
+    AppRoutingModule
   ],
   providers: [ChatService],
   bootstrap: [AppComponent]
