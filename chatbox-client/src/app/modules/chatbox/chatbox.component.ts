@@ -22,7 +22,7 @@ messageCon = new MessageContent();
   ngOnInit() {
       this.getPastMessage();
   		this.getMessage();
-      console.log(this.messagePast)
+      this.scrollToBottom();
   }
   // calculate(base: number, upkeep: number, level: number){
   //   let imp = base + ((base + ((300 * upkeep) / 7)) * (Math.pow(1.007, level) - 1));
@@ -33,16 +33,22 @@ messageCon = new MessageContent();
     this.messagePast = await this._chatService.getAllChats();
   }
 
+  scrollToBottom(){
+    let display = $('#chatmessages');
+    display.animate({ scrollTop: display[0].scrollHeight }, 'fast');
+  }
+
   getMessage(){
   	this._chatService.getMessages()
   		.subscribe((message: string) => {
 	        this.messageList.push(message);
 	      });
+      this.scrollToBottom();
   }
   
   sendMessage(){
     this.messageCon.message = this.message;
-    this.messageCon.user = "jc" + this.messagePast.length;
+    this.messageCon.user = "user" + this.messagePast.length;
     this.messageCon.DateSent = new Date();
   	this._chatService.sendMessage(this.message);
     this._chatService.saveChats(this.messageCon);

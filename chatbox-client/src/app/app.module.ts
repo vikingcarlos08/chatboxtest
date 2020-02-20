@@ -10,6 +10,8 @@ import {ChatService} from './services/export';
 import { ChatboxComponent } from './modules/chatbox/chatbox.component'
 import { AppBootstrapModule } from './app-bootstrap.module';
 
+import * as $ from "jquery";
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -11,6 +11,8 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
+    "allowSyntheticDefaultImports": true,
+    "types": ["jquery","bootstrap","signalr"],
     "typeRoots": [
       "node_modules/@types"
     ],
